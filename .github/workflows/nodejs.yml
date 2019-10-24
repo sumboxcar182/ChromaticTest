@@ -35,4 +35,5 @@ jobs:
         npm run chromatic
       env:
         CHROMATIC_APP_CODE: ${{ secrets.CHROMATIC_APP_CODE }}
+        CI: true
        
