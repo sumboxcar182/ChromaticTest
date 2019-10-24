@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -34,5 +34,5 @@ jobs:
       run: 
         npm run chromatic
       env:
-        CHROMATIC_APP_CODE: q11bmdc3ic
+        CHROMATIC_APP_CODE: ${{ secrets.CHROMATIC_APP_CODE }}
        
