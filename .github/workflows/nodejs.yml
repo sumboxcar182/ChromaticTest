@@ -17,6 +17,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+        
     - name: npm install, build, and test
       working-directory: app
       run: 
@@ -26,5 +27,12 @@ jobs:
         npm run chromatic
       env:
         CI: true
+        CHROMATIC_APP_CODE: q11bmdc3ic
+
+    - name: Run chromatic tests
+      working-directory: app
+      run: 
+        npm run chromatic
+      env:
         CHROMATIC_APP_CODE: q11bmdc3ic
        
